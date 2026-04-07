@@ -171,31 +171,65 @@ button:hover {
 
 /* ==================== DISCORD SECTION ==================== */
 #Discord {
-    padding: 100px 50px;
-    background-color: #f8f9fa;
-    text-align: center;
+    padding: 120px 50px;
+    background-color: #cefeff;     /* Your teal color */
 }
 
 #Discord h2 {
     font-size: 2.9rem;
     font-weight: 700;
-    margin-bottom: 50px;
-    color: #1a1a1a;
+    margin-bottom: 70px;
+    color: #ffffff;
+    text-align: center;
 }
 
 .discord-container {
-    max-width: 800px;
+    display: flex;
+    align-items: center;
+    gap: 80px;
+    max-width: 1240px;
     margin: 0 auto;
 }
 
-.discord-container img {
-    width: 100%;
-    max-width: 420px;
-    height: auto;
-    border-radius: 12px;
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+.discord-image {
+    flex: 0 0 45%;           /* Controls how much space the logo takes */
+    max-width: 45%;
 }
 
+.discord-image img {
+    width: 100%;
+    height: auto;
+    max-width: 380px;        /* Makes the Discord logo a good size */
+    display: block;
+}
+
+.discord-text {
+    flex: 1;
+    color: #ffffff;
+}
+
+.discord-text p {
+    font-size: 1.18rem;
+    line-height: 1.75;
+    margin-bottom: 24px;
+}
+
+.discord-text p:last-child {
+    margin-bottom: 0;
+}
+
+/* Mobile - stack on top of each other */
+@media (max-width: 968px) {
+    .discord-container {
+        flex-direction: column;
+        text-align: center;
+        gap: 50px;
+    }
+    
+    .discord-image {
+        max-width: 100%;
+    }
+}
 /* ==================== CONTACT SECTION ==================== */
 #Contact {
     padding: 100px 50px;
@@ -275,5 +309,64 @@ footer a:hover {
     color: #0066ff;
 }
 
-/* ==================== RESPONSIVE DESIGN ==================== */
-@media (
+*/
+
+#discord {background-color: #45b6b8;}
+/* ==================== CONTACT SECTION ==================== */
+#Contact {
+    padding: 120px 50px;
+    background-color: #5a8ce3;     /* Your blue color */
+}
+
+#Contact h2 {
+    font-size: 2.9rem;
+    font-weight: 700;
+    margin-bottom: 60px;
+    color: #ffffff;
+    text-align: center;
+}
+
+form {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;        /* Fixed: was empty */
+    gap: 20px;
+}
+
+label {
+    font-weight: 500;
+    color: #ffffff;
+}
+
+input, textarea {
+    padding: 14px 16px;
+    border: 1px solid rgba(255,255,255,0.3);
+    border-radius: 8px;
+    font-size: 1rem;
+    background-color: rgba(255,255,255,0.9);
+    color: #333;
+}
+
+textarea {
+    min-height: 160px;
+    resize: vertical;
+}
+
+form button {
+    padding: 16px 40px;
+    font-size: 1.15rem;
+    background-color: #ffffff;
+    color: #5a8ce3;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    align-self: flex-start;
+    transition: all 0.3s ease;
+}
+
+form button:hover {
+    background-color: #f0f0f0;
+    transform: translateY(-2px);
+}
